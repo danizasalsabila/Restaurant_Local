@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EDIT MENU</title>
+	<link rel="stylesheet" href="form.css">
+</head>
+<body>
+<h2>EDIT DATA MENU</h2>
+	<br/>
+	<a href="menu.html"><button>KEMBALI</button></a>
+	<br/>
+    <div>
+		<form method="post" action="update.php">
+			<table>
+				<tr>			
+					<td>Kategori Menu</td>
+					<td>
+						<input type="hidden" name="id">
+						<input type="text" name="kategori">
+					</td>
+				</tr>
+                 <tr>			
+					<td>Nama Menu</td>
+					<td>
+						<input type="text" name="nama">
+					</td>
+				</tr>
+                <tr>			
+					<td>Harga</td>
+					<td>
+						<input type="number" name="harga">
+					</td>
+				</tr>		
+			</table>
+			<div>
+		</form>
+</body>
+</html>

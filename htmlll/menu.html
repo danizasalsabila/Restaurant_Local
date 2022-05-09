@@ -1,0 +1,42 @@
+<html>
+<head>
+<head>
+	<link rel="stylesheet" href="style-home.css">
+	<title>MENU</title>
+</head>
+<body>
+<div class="container3">
+	<h1>DAFTAR MENU</h1>
+	<br/>
+	<a href="tambah.php" class = "button">+ TAMBAH MENU</a>
+	<br/>
+	<br/>
+	<table border=1>
+		<tr>
+			<th>NO</th>
+			<th>kategori</th>
+			<th>harga</th>
+			<th>OPSI</th>
+		</tr>
+		
+		<?php 
+		include 'index-menu.php';
+		$id = 1;
+    $data = mysqli_query($koneksi,"select * from makanan_ringan");
+		while($d = mysqli_fetch_array($data)){
+			?>
+			<tr>
+				<td><?php echo $id++; ?></td>
+				<td><?php echo $d['kategori']; ?></td>
+				<td><?php echo $d['harga']; ?></td>
+				<td>
+					<a href="edit.php?id=<?php echo $d['id_makanan']?>" class = "button">EDIT</a>
+					<a href="hapus.php?id=<?php echo $d['id_makanan'];?>" class =" button">HAPUS</a>
+				</td>
+			</tr>
+			<?php 
+		}
+		?>
+	</table>
+</body>
+</html>
